@@ -1,0 +1,66 @@
+{
+  "name": "react-vite-rtk",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src  --ext  .ts,.js,.jsx,.tsx --fix --max-warnings=0 ",
+    "prettier": "prettier --write .",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "@vitest/ui": "latest",
+    "autoprefixer": "^10.4.7",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^7.0.0",
+    "jsdom": "^20.0.0",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.3",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.12",
+    "vite-plugin-eslint": "^1.6.1",
+    "vitest": "^0.16.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --max-warnings=0"
+    ]
+  }
+}
